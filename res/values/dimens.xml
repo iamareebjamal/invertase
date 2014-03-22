@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <!-- The platform's desired minimum size for a dialog's width when it
+         is along the major axis (that is the screen is landscape).  This may
+         be either a fraction or a dimension. -->
+    <item type="dimen" name="abs__dialog_min_width_major">45%</item>
+    <!-- The platform's desired minimum size for a dialog's width when it
+         is along the minor axis (that is the screen is portrait).  This may
+         be either a fraction or a dimension. -->
+    <item type="dimen" name="abs__dialog_min_width_minor">72%</item>
+    
+    <dimen name="abs__alert_dialog_title_height">64dp</dimen>
+
+</resources>

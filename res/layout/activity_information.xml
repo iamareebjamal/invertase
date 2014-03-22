@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+	android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+	<ScrollView
+		android:layout_height="fill_parent"
+		android:layout_width="fill_parent"
+		android:orientation="vertical"
+	>
+
+
+		<TextView
+			android:id="@+id/TextViewLink"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textSize="18.0sp"
+			android:padding="10.0dip"
+			android:autoLink="web"
+			android:text="Hello" />
+
+	</ScrollView>
+
+</LinearLayout>

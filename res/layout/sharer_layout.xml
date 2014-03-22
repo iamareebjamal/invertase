@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".SharerLayoutActivity" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="iamareebjamal"
+            android:textColor="#ff33b5e5"
+            android:textSize="21sp" />
+        
+        <LinearLayout
+         android:id="@+id/linearLayout1"
+         android:orientation="horizontal"
+         android:layout_width="fill_parent"
+         android:layout_height="2dp"
+         android:background="#ff33b5e5"
+         android:gravity="center" >
+        </LinearLayout>
+        
+        
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/textView2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_centerHorizontal="true"
+        android:background="#ffff6666"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:padding="5dp"
+        android:text="Location : India" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView2"
+        android:background="#ff33b5e5"
+        android:padding="5dp"
+        android:text="Age : 17"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+    
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView3"
+        android:background="#ffbb66ff"
+        android:padding="5dp"
+        android:text="Hobby : Trolling"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+    
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView4"
+        android:background="#ff44cc55"
+        android:padding="5dp"
+        android:text="Dislikes : Noobs"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:padding="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView5"
+        android:layout_centerHorizontal="true"
+        android:text="You can find me on XDA, Facebook, Google Plus, and Twitter" />
+
+</RelativeLayout>
