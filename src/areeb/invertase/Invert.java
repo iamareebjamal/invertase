@@ -1,9 +1,7 @@
 package areeb.invertase;
 
-
 //import com.actionbarsherlock.view.Menu;
 //import com.actionbarsherlock.view.MenuItem;
-
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -49,10 +47,7 @@ public class Invert extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		
 		// abs.setSplitBackgroundDrawable(getResources().getDrawable(R.drawable.abs__ab_bottom_solid_inverse_holo));
-
-		
 
 		first = getSharedPreferences("InveraseStat", 0);
 		firsttime = first.getBoolean("firsttime", true);
@@ -81,41 +76,39 @@ public class Invert extends Activity {
 			firsttime = false;
 
 		}
-		
+
 		LinearLayout oldCode = (LinearLayout) findViewById(R.id.OldCode);
 		oldCode.setOnLongClickListener(new View.OnLongClickListener() {
-			
-			
-			
+
 			@SuppressLint("NewApi")
 			@Override
 			public boolean onLongClick(View arg0) {
 				// TODO Auto-generated method stub
 				int sdk = android.os.Build.VERSION.SDK_INT;
-				
-				if (sdk < android.os.Build.VERSION_CODES.HONEYCOMB){
-				
-				
-				android.text.ClipboardManager clipboard = (android.text.ClipboardManager) getApplicationContext().getSystemService(CLIPBOARD_SERVICE);
-				
-				clipboard.setText("#" + string);
+
+				if (sdk < android.os.Build.VERSION_CODES.HONEYCOMB) {
+
+					android.text.ClipboardManager clipboard = (android.text.ClipboardManager) getApplicationContext()
+							.getSystemService(CLIPBOARD_SERVICE);
+
+					clipboard.setText("#" + string);
 				} else {
-					
+
 					android.content.ClipboardManager clipboard = (android.content.ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
-					ClipData clip = ClipData.newPlainText("Invertase Old", "#" + string);
-					
+					ClipData clip = ClipData.newPlainText("Invertase Old", "#"
+							+ string);
+
 					clipboard.setPrimaryClip(clip);
-					
+
 				}
-				
-				IcsToast.makeText(getApplicationContext(), "Old Code Copied", IcsToast.LENGTH_SHORT).show();
-				
-				
-				
+
+				IcsToast.makeText(getApplicationContext(), "Old Code Copied",
+						IcsToast.LENGTH_SHORT).show();
+
 				return false;
 			}
 		});
- 
+
 		LinearLayout newCode = (LinearLayout) findViewById(R.id.NewCode);
 		newCode.setOnClickListener(new View.OnClickListener() {
 
@@ -128,36 +121,35 @@ public class Invert extends Activity {
 
 			}
 		});
-		
-		
+
 		newCode.setOnLongClickListener(new View.OnLongClickListener() {
-			
-			
+
 			@SuppressLint("NewApi")
 			@Override
 			public boolean onLongClick(View arg0) {
 				// TODO Auto-generated method stub
-				
-                int sdk = android.os.Build.VERSION.SDK_INT;
-				
-				if (sdk < android.os.Build.VERSION_CODES.HONEYCOMB){
-				
-				
-				android.text.ClipboardManager clipboard = (android.text.ClipboardManager) getApplicationContext().getSystemService(CLIPBOARD_SERVICE);
-				
-				clipboard.setText("#" + stringInvert);
+
+				int sdk = android.os.Build.VERSION.SDK_INT;
+
+				if (sdk < android.os.Build.VERSION_CODES.HONEYCOMB) {
+
+					android.text.ClipboardManager clipboard = (android.text.ClipboardManager) getApplicationContext()
+							.getSystemService(CLIPBOARD_SERVICE);
+
+					clipboard.setText("#" + stringInvert);
 				} else {
-					
+
 					android.content.ClipboardManager clipboard = (android.content.ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
-					ClipData clip = ClipData.newPlainText("Invertase Old", "#" + stringInvert);
-					
+					ClipData clip = ClipData.newPlainText("Invertase Old", "#"
+							+ stringInvert);
+
 					clipboard.setPrimaryClip(clip);
-					
+
 				}
-				
-				
-				IcsToast.makeText(getApplicationContext(), "New Code Copied", IcsToast.LENGTH_SHORT).show();
-				
+
+				IcsToast.makeText(getApplicationContext(), "New Code Copied",
+						IcsToast.LENGTH_SHORT).show();
+
 				return false;
 			}
 		});
@@ -225,122 +217,94 @@ public class Invert extends Activity {
 				return false;
 			}
 		});
-		
-		
-		
+
 		ImageView img = (ImageView) findViewById(R.id.closeIc);
-		img.setOnLongClickListener(new View.OnLongClickListener(){
+		img.setOnLongClickListener(new View.OnLongClickListener() {
 
-				@Override
-				public boolean onLongClick(View view)
-				{
+			@Override
+			public boolean onLongClick(View view) {
 
-					/*TextView tv = new TextView(getApplicationContext());
-					tv.setText("Close");
-					tv.setTypeface(Typeface.DEFAULT, 0);
-					tv.setTextColor(Color.WHITE);
-					tv.setPadding(10, 10, 10, 10);
-					tv.setBackgroundResource(R.drawable.abs__toast_frame);
-					//tv.setShadowLayer(1f, 1, 1, Color.parseColor("#ff555555"));
+				/*
+				 * TextView tv = new TextView(getApplicationContext());
+				 * tv.setText("Close"); tv.setTypeface(Typeface.DEFAULT, 0);
+				 * tv.setTextColor(Color.WHITE); tv.setPadding(10, 10, 10, 10);
+				 * tv.setBackgroundResource(R.drawable.abs__toast_frame);
+				 * //tv.setShadowLayer(1f, 1, 1, Color.parseColor("#ff555555"));
+				 * 
+				 * 
+				 * Toast toast = new Toast(getApplicationContext());
+				 * toast.setDuration(Toast.LENGTH_SHORT); toast.setView(tv);
+				 * toast.setGravity(Gravity.BOTTOM, 0, 50); toast.show();
+				 */
 
+				longClick(view, "Close", 0);
 
-					Toast toast = new Toast(getApplicationContext());
-					toast.setDuration(Toast.LENGTH_SHORT);
-					toast.setView(tv);
-					toast.setGravity(Gravity.BOTTOM, 0, 50);
-					toast.show();*/
-					
-					longClick(view, "Close", 0);
+				return true;
+			}
 
-
-					return true;
-				}
-
-
-
-			});
-
-
+		});
 
 		ImageView imc = (ImageView) findViewById(R.id.queIc);
-		imc.setOnLongClickListener(new View.OnLongClickListener(){
+		imc.setOnLongClickListener(new View.OnLongClickListener() {
 
-				@Override
-				public boolean onLongClick(View view)
-				{
+			@Override
+			public boolean onLongClick(View view) {
 
-					/*TextView tv = new TextView(getApplicationContext());
-					tv.setText("Info");
-					tv.setTypeface(Typeface.DEFAULT, 0);
-					tv.setTextColor(Color.WHITE);
-					tv.setPadding(10, 10, 10, 10);
-					tv.setBackgroundResource(R.drawable.abs__toast_frame);
-					//tv.setShadowLayer(1f, 1, 1, Color.parstv.setBackgroundResource(R.drawable.toast);eColor("#ff555555"));
+				/*
+				 * TextView tv = new TextView(getApplicationContext());
+				 * tv.setText("Info"); tv.setTypeface(Typeface.DEFAULT, 0);
+				 * tv.setTextColor(Color.WHITE); tv.setPadding(10, 10, 10, 10);
+				 * tv.setBackgroundResource(R.drawable.abs__toast_frame);
+				 * //tv.setShadowLayer(1f, 1, 1,
+				 * Color.parstv.setBackgroundResource
+				 * (R.drawable.toast);eColor("#ff555555"));
+				 * 
+				 * 
+				 * 
+				 * 
+				 * Toast toast = new Toast(getApplicationContext());
+				 * toast.setDuration(Toast.LENGTH_SHORT); toast.setView(tv);
+				 * toast.setGravity(Gravity.BOTTOM, 100, 50); toast.show();
+				 */
 
+				longClick(view, "Info", 100);
 
+				return true;
+			}
 
-
-					Toast toast = new Toast(getApplicationContext());
-					toast.setDuration(Toast.LENGTH_SHORT);
-					toast.setView(tv);
-					toast.setGravity(Gravity.BOTTOM, 100, 50);
-					toast.show();*/
-					
-					longClick(view, "Info", 100);
-
-					return true;
-				}
-
-
-
-			});
-
-
-
+		});
 
 		ImageView ims = (ImageView) findViewById(R.id.queSh);
-		ims.setOnLongClickListener(new View.OnLongClickListener(){
+		ims.setOnLongClickListener(new View.OnLongClickListener() {
 
-				@Override
-				public boolean onLongClick(View v)
-				{
+			@Override
+			public boolean onLongClick(View v) {
 
-					longClick(v, "About", -100);
-					
-					return true;
-				}
+				longClick(v, "About", -100);
 
+				return true;
+			}
 
-
-			});
-		
-		
+		});
 
 	}
-	
-	
-	public void longClick(View view, String string, int i){
-		
-		
 
-        
-        final int height = view.getHeight();
-        
+	public void longClick(View view, String string, int i) {
 
-        Toast cheatSheet = IcsToast.makeText(this, string, IcsToast.LENGTH_SHORT);
-        //if (midy < displayFrame.height()) {
-            // Show along the top; follow action buttons
-            cheatSheet.setGravity(Gravity.BOTTOM,
-                    i, height);
-        //} else {
-            // Show along the bottom center
-            //cheatSheet.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, height);
-       // }
-        cheatSheet.show();
-		
-		
-		
-		
+		final int height = view.getHeight();
+
+		Toast cheatSheet = IcsToast.makeText(this, string,
+				IcsToast.LENGTH_SHORT);
+		// if (midy < displayFrame.height()) {
+		// Show along the top; follow action buttons
+		cheatSheet.setGravity(Gravity.BOTTOM, i, height);
+		// } else {
+		// Show along the bottom center
+		// cheatSheet.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0,
+		// height);
+		// }
+		cheatSheet.show();
+
 	}
 
 	/*
@@ -403,8 +367,8 @@ public class Invert extends Activity {
 				public void onClick(View arg0) {
 					// TODO Auto-generated method stub
 					IcsToast.makeText(getApplicationContext(),
-							color + " | #" + stringInvert, IcsToast.LENGTH_SHORT)
-							.show();
+							color + " | #" + stringInvert,
+							IcsToast.LENGTH_SHORT).show();
 				}
 			});
 
@@ -416,8 +380,8 @@ public class Invert extends Activity {
 		} else {
 
 			if (string != "") {
-				IcsToast.makeText(this, "Not a valid hex code", IcsToast.LENGTH_LONG)
-						.show();
+				IcsToast.makeText(this, "Not a valid hex code",
+						IcsToast.LENGTH_LONG).show();
 
 			}
 
@@ -452,19 +416,10 @@ public class Invert extends Activity {
 		startActivity(new Intent(this, InformationActivity.class));
 
 	}
-	
-	
-	public void sharerMenu(View view){
-		
+
+	public void sharerMenu(View view) {
+
 		startActivity(new Intent(this, SharerLayoutActivity.class));
 	}
-
-	
-
-	
-	
-	
-
-	
 
 }

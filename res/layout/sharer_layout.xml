@@ -121,64 +121,63 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="#556dc8"
+            android:onClick="fb"
             android:padding="5dp"
             android:text="@string/sharer_fb"
             android:textColor="#bbffffff"
-            android:textSize="15sp"
-            android:onClick="fb" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/twTV"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="#33ccff"
+            android:onClick="tw"
             android:padding="5dp"
             android:text="@string/sharer_tw"
             android:textColor="#bbffffff"
-            android:textSize="15sp"
-            android:onClick="tw" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/gpTV"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="#f35642"
+            android:onClick="gp"
             android:padding="5dp"
             android:text="@string/sharer_gp"
             android:textColor="#bbffffff"
-            android:textSize="15sp"
-            android:onClick="gp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/xdTV"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="#714903"
+            android:onClick="xd"
             android:padding="5dp"
             android:text="@string/sharer_xd"
             android:textColor="#bbffc71b"
-            android:textSize="15sp"
-            android:onClick="xd" />
+            android:textSize="15sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_marginTop="10dp"
         android:layout_height="30dp"
         android:layout_below="@+id/linearLayout3"
-        android:background="@drawable/dark_footer"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/dark_footer"
         android:gravity="center"
-        android:orientation="vertical"
-        android:onClick="marketRedirect" >
+        android:onClick="marketRedirect"
+        android:orientation="vertical" >
 
         <TextView
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#aaffffff"
-            android:text="@string/sharer_others" />
-
+            android:text="@string/sharer_others"
+            android:textColor="#aaffffff" />
     </LinearLayout>
 
 </RelativeLayout>

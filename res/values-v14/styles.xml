@@ -3,16 +3,17 @@
     <!--
         Base application theme for API 14+. This theme completely replaces
         AppBaseTheme from BOTH res/values/styles.xml and
-        res/values-v11/styles.xml on API 14+ devices.
+        res/values-v11/styles.xml on API 14+ devices.
     -->
     <style name="AppBaseTheme" parent="android:Theme.Holo.Light.NoActionBar">
+
         <!-- API 14 theme customizations can go here. -->
-        
+
         <item name="android:editTextStyle">@style/EditText</item>
         <item name="android:windowNoTitle">true</item>
     </style>
-    
-     <style name="EditText">
+
+    <style name="EditText">
         <item name="android:textColor">#ff000000</item>
         <item name="android:textSize">17.0sp</item>
         <item name="android:gravity">center_vertical</item>

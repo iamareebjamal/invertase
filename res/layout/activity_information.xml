@@ -1,68 +1,86 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-	android:gravity="center_horizontal"
-    android:orientation="vertical">
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
 
-	<ScrollView
-		android:layout_height="fill_parent"
-		android:layout_width="fill_parent"
-		android:orientation="vertical">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-		
-		
-		<LinearLayout
-	    	android:layout_width="match_parent"
-	    	android:layout_height="wrap_content"
-	    	android:orientation="vertical" >
-	    	
-		    <TextView
-				android:id="@+id/TextViewLink"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:textSize="18.0sp"
-				android:padding="10.0dip"
-				android:autoLink="web"
-				android:text="@string/app_name" />
+            <TextView
+                android:id="@+id/TextViewLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:padding="10.0dip"
+                android:text="@string/app_name"
+                android:textSize="18.0sp" />
 
-		    <LinearLayout
-		        android:id="@+id/creditLayout"
-		        android:layout_width="match_parent"
-		        android:layout_height="30dp"
-		        android:background="@drawable/drop_down"
-		        android:gravity="center_vertical"
-		        android:orientation="vertical" >
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#dddddd"
+                android:padding="5dp"
+                android:text="@string/open_source_ftw"
+                android:textColor="#333333" />
 
-		        <TextView
-		            android:layout_width="wrap_content"
-		            android:layout_height="wrap_content"
-		            android:padding="5dp"
-		            android:text="@string/credits"
-		            android:textColor="#ffffff" />
-		        
-		    </LinearLayout>
-		    
-		    <LinearLayout
-		        android:id="@+id/hiddenCreditLayout"
-	    		android:layout_width="match_parent"
-	    		android:layout_height="wrap_content"
-	    		android:orientation="vertical" >
+            <LinearLayout
+                android:id="@+id/gitRed"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/dark_footer"
+                android:gravity="center"
+                android:orientation="horizontal" >
 
-		        <TextView
-		            android:id="@+id/textView1"
-		            android:layout_width="wrap_content"
-		            android:layout_height="wrap_content"
-		            android:padding="5dp"
-		            android:text="@string/credit_content" />
-		        
-			</LinearLayout>
-		    
-		</LinearLayout>
-		
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="60dp"
+                    android:contentDescription="@string/cont_desc"
+                    android:padding="10dp"
+                    android:src="@drawable/github" />
+            </LinearLayout>
 
-	</ScrollView>
+            <LinearLayout
+                android:id="@+id/creditLayout"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/drop_down"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
 
-	
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/credits"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/hiddenCreditLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/credit_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

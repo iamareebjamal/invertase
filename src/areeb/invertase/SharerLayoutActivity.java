@@ -22,10 +22,10 @@ public class SharerLayoutActivity extends Activity {
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.sharer_layout);
-		
+
 		final TextView fbtv = (TextView) findViewById(R.id.fbTV);
 		fbtv.setOnClickListener(new View.OnClickListener() {
-			
+
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
@@ -33,11 +33,10 @@ public class SharerLayoutActivity extends Activity {
 				netHai("http://www.facebook.com/iamareebjamal");
 			}
 		});
-		
-		
+
 		final TextView twtv = (TextView) findViewById(R.id.twTV);
 		twtv.setOnClickListener(new View.OnClickListener() {
-			
+
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
@@ -45,10 +44,10 @@ public class SharerLayoutActivity extends Activity {
 				netHai("http://www.twitter.com/iamareebjamal");
 			}
 		});
-		
+
 		final TextView gptv = (TextView) findViewById(R.id.gpTV);
 		gptv.setOnClickListener(new View.OnClickListener() {
-			
+
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
@@ -56,34 +55,26 @@ public class SharerLayoutActivity extends Activity {
 				netHai("http://plus.google.com/101187817179546867616");
 			}
 		});
-		
-		
+
 		final TextView xdtv = (TextView) findViewById(R.id.xdTV);
 		xdtv.setOnClickListener(new View.OnClickListener() {
-			
+
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				xdtv.setBackgroundColor(Color.parseColor("#876222"));
-				
+
 				netHai("http://forum.xda-developers.com/member.php?u=4782403");
 			}
 		});
-		
-		
-		
-		
+
 	}
 
 	public void marketRedirect(View view) {
 
 		netHai("market://search?q=iamareebjamal");
-		
-		
 
 	}
-
-	
 
 	public void tw(View view) {
 		TextView twtv = (TextView) findViewById(R.id.twTV);
@@ -99,12 +90,12 @@ public class SharerLayoutActivity extends Activity {
 		netHai("http://plus.google.com/101187817179546867616");
 
 	}
-	
+
 	public void xd(View view) {
-		
+
 		TextView xdtv = (TextView) findViewById(R.id.xdTV);
 		xdtv.setBackgroundColor(Color.parseColor("#876222"));
-		
+
 		netHai("http://forum.xda-developers.com/member.php?u=4782403");
 
 	}

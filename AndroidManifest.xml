@@ -30,8 +30,8 @@
         </activity>
         <activity
             android:name="areeb.invertase.InformationActivity"
-            android:theme="@style/Theme.Sherlock.Light.Dialog.Title"
-            android:label="Info" >
+            android:label="Info"
+            android:theme="@style/Theme.Sherlock.Light.Dialog.Title" >
         </activity>
     </application>
 
