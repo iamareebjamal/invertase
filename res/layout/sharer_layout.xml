@@ -10,86 +10,175 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:orientation="vertical"
-        android:gravity="center" >
+        android:gravity="center"
+        android:orientation="vertical" >
 
         <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="iamareebjamal"
+            android:text="@string/dev_name"
             android:textColor="#ff33b5e5"
             android:textSize="21sp" />
-        
+
         <LinearLayout
-         android:id="@+id/linearLayout1"
-         android:orientation="horizontal"
-         android:layout_width="fill_parent"
-         android:layout_height="2dp"
-         android:background="#ff33b5e5"
-         android:gravity="center" >
+            android:id="@+id/linearLayout2"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#ff33b5e5"
+            android:gravity="center"
+            android:orientation="horizontal" >
         </LinearLayout>
-        
-        
     </LinearLayout>
 
     <TextView
-        android:layout_marginTop="5dp"
         android:id="@+id/textView2"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/linearLayout1"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
         android:background="#ffff6666"
-        android:textColor="#ffffff"
-        android:textSize="15sp"
         android:padding="5dp"
-        android:text="Location : India" />
+        android:text="@string/about_location"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
         android:background="#ff33b5e5"
         android:padding="5dp"
-        android:text="Age : 17"
-        android:textColor="#ffffff"
-        android:textSize="15sp" />
-    
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/textView3"
-        android:background="#ffbb66ff"
-        android:padding="5dp"
-        android:text="Hobby : Trolling"
-        android:textColor="#ffffff"
-        android:textSize="15sp" />
-    
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/textView4"
-        android:background="#ff44cc55"
-        android:padding="5dp"
-        android:text="Dislikes : Noobs"
+        android:text="@string/about_age"
         android:textColor="#ffffff"
         android:textSize="15sp" />
 
     <TextView
-        android:id="@+id/textView6"
-        android:padding="15dp"
-        android:layout_width="wrap_content"
+        android:id="@+id/textView4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:background="#ffbb66ff"
+        android:padding="5dp"
+        android:text="@string/about_likes"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:background="#ff44cc55"
+        android:padding="5dp"
+        android:text="@string/about_dislikes"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView5"
         android:layout_centerHorizontal="true"
-        android:text="You can find me on XDA, Facebook, Google Plus, and Twitter" />
+        android:layout_marginTop="10dp"
+        android:background="#cccccc"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/about_sharer" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#ff999999"
+            android:gravity="center"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout4"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/fbTV"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#556dc8"
+            android:padding="5dp"
+            android:text="@string/sharer_fb"
+            android:textColor="#bbffffff"
+            android:textSize="15sp"
+            android:onClick="fb" />
+
+        <TextView
+            android:id="@+id/twTV"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#33ccff"
+            android:padding="5dp"
+            android:text="@string/sharer_tw"
+            android:textColor="#bbffffff"
+            android:textSize="15sp"
+            android:onClick="tw" />
+
+        <TextView
+            android:id="@+id/gpTV"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#f35642"
+            android:padding="5dp"
+            android:text="@string/sharer_gp"
+            android:textColor="#bbffffff"
+            android:textSize="15sp"
+            android:onClick="gp" />
+
+        <TextView
+            android:id="@+id/xdTV"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#714903"
+            android:padding="5dp"
+            android:text="@string/sharer_xd"
+            android:textColor="#bbffc71b"
+            android:textSize="15sp"
+            android:onClick="xd" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/linearLayout3"
+        android:background="@drawable/dark_footer"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:onClick="marketRedirect" >
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#aaffffff"
+            android:text="@string/sharer_others" />
+
+    </LinearLayout>
 
 </RelativeLayout>
